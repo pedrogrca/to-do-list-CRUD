@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: "Funnel Sans", sans-serif;
 }
 
 body {
@@ -20,15 +20,86 @@ body {
 }
 
 .to-do {
-    background-color: rgb(255, 255, 255);
+    background-color: #faf6f6;
     width: 1000px;
     height: 500px;
-    border-radius: 20px;
-    font-family: "Funnel Sans", sans-serif;
+    border-radius: 40px;
 }
 
 .to-do h2 {
     font-size: 40px;
     margin-top: 90px;
     margin-left: 90px;
+    color: #2c2c2c;
+}
+
+.row {
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-right: 400px;
+    margin-bottom: 20px;
+    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    font-size: 18px;
+}
+
+button {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #2c2c2c;
+    color: antiquewhite;
+    cursor: pointer;
+    padding: 10px 3px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+button:hover {
+    background: antiquewhite;
+    color: #2c2c2c;
+    transition: background-color 0.5s;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 100px;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    font-size: 25px;
+    color: #2c2c2c;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-image: url(images/desmarcado.png);
+    background-position: center;
+    background-size: cover;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.done {
+    color: #868686;
+    text-decoration: line-through;
+}
+
+ul li.done::before {
+    background-image: url(images/marcado.png);
 }
